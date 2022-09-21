@@ -1,11 +1,11 @@
 version: 0.2
 env:
   variables:
-    S3_BUCKET: "http://chkrdawsdeploydemov1.s3-website.ap-south-1.amazonaws.com"
+    S3_BUCKET: "{{S3_BUCKET_URL}}"
 phases:
   install:
     runtime-versions:
-      nodejs: 14.x
+      nodejs: 14
     commands:
       - echo Installing source NPM dependencies...
       - npm install
